@@ -1,0 +1,40 @@
+const LAYOUT_JSON_TEMPLATE = `
+{
+  "example": {
+    "type": "stack",
+    "screens": [
+      { "name": "screenA", "display": "hidden" },
+      { "name": "screenB", "display": "dynamic" },
+      { "name": "screenC" }
+    ]
+  },
+  "group": {
+    "display": "hidden",
+    "screens": [
+      { "name": "modalA", "display": "hidden" },
+      { "name": "modalB", "display": "dynamic" },
+      { "name": "modalC" }
+    ]
+  },
+  "drawerWithNested": {
+    "type": "drawer",
+    "display": "hidden",
+    "screens": [
+      { "name": "drawerA", "display": "hidden" },
+      { "name": "drawerB", "display": "dynamic" },
+      { "name": "drawerC" }
+    ],
+    "nestedTabs": {
+    "type": "tabs",
+    "display": "hidden",
+    "screens": [
+      { "name": "tabA", "display": "hidden" },
+      { "name": "tabB", "display": "dynamic" },
+      { "name": "tabC" }
+    ]
+  }
+  }
+}
+`
+
+module.exports = { LAYOUT_JSON_TEMPLATE };
